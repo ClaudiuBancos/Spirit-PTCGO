@@ -5,16 +5,6 @@ Use `- [ ]` for open items and `- [x]` for done ones (move done items to the Don
 ARCHITECTURE.md maps the code; this file just tracks the work.
 
 ## Get it running locally (single PC)
-- [ ] Prep the client (`D:\1. Programming\Pokemon TCG Online Client\PokemonTradingCardGameOnline`)
-	- [ ] Back up `Pokemon Trading Card Game Online_Data\cake.cfg` (e.g. `cake.cfg.orig`)
-	- [ ] Set `hostname=127.0.0.1`, `versionURL=http://127.0.0.1:8000/`, `assetURL=http://127.0.0.1:8000/`
-		- [ ] Leave the AppSecret lines and the trailing `version=2.95.0.5815` untouched
-- [ ] Set up and start the server
-	- [ ] Run `run.bat` from the repo root (Python 3.12.6 is already installed and on PATH)
-		- [ ] Creates `venv`, installs requirements, generates `server.crt`/`server.key`, seeds `ptcgo_server.db`
-		- [ ] Do NOT install `server.crt` into the Windows trust store (the README says this breaks the client)
-	- [ ] Let the first boot finish: AutoBundle builds bundles from ~1.8 GB of card PNGs, which can take a while
-	- [ ] Allow/deny the Windows Firewall prompt (local-only play does not need inbound access)
 - [ ] Play
 	- [ ] Launch `Pokemon Trading Card Game Online.exe` directly, not `Refresher\Refresher.exe` (an old 2.70 patcher)
 	- [ ] Log in: any new username/password auto-registers, or use the seeded `brandon` / `password`
@@ -38,3 +28,8 @@ ARCHITECTURE.md maps the code; this file just tracks the work.
 
 ## Done
 - [x] Repo overview written to ARCHITECTURE.md
+- [x] Prep the client: `cake.cfg` backed up to `cake.cfg.orig` and pointed at 127.0.0.1 (LF endings kept)
+- [x] Set up and start the server: venv, deps, `server.crt`/`server.key`, `ptcgo_server.db` (seeded `brandon` / `password`)
+	- [x] First boot took ~6 min (AutoBundle + ~620 MB `generatedBundleCache`); later boots reuse the cache
+	- [x] Verified: HTTP 8000 and `/admin` return 200, TCP 39389 completes a TLS handshake
+	- [x] Start it with `.\run.bat` (with the `.\`): a bare `run.bat` failed from the shells used here
