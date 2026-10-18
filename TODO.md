@@ -12,7 +12,11 @@ ARCHITECTURE.md maps the code; this file just tracks the work.
 	- [ ] Smoke test: collection loads, open a pack, build a deck, play a solo match vs the AI bot
 - [ ] Make it convenient
 	- [ ] Small launcher that starts the server, waits for port 39389, then starts the client
-	- [ ] Script to swap `cake.cfg` between the original and local settings
+
+## GLC community server (167.233.237.46)
+- [ ] Log in with a new username and a password not used anywhere else (the account is created on first login)
+	- [ ] Play from Versus → Gym Leader Challenge; every account has every GLC card
+	- [ ] Switch back for local play with `tools\switch-server.bat` (double-click toggles) or `node tools/switch-server.js local`
 
 ## Known limits worth knowing
 - [ ] The AI opponent is minimal (picks the first valid target); real games need a second human
@@ -27,6 +31,7 @@ ARCHITECTURE.md maps the code; this file just tracks the work.
 - [ ] Add custom cards, sleeves, coins, or deck boxes (see README)
 
 ## Done
+- [x] Script to switch `cake.cfg` between local, GLC and official servers (`tools/switch-server.js`); client currently set to GLC
 - [x] Repo overview written to ARCHITECTURE.md
 - [x] Prep the client: `cake.cfg` backed up to `cake.cfg.orig` and pointed at 127.0.0.1 (LF endings kept)
 - [x] Set up and start the server: venv, deps, `server.crt`/`server.key`, `ptcgo_server.db` (seeded `brandon` / `password`)

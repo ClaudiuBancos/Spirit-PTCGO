@@ -70,5 +70,8 @@ PNGs + scripts) → refresh asset manifest → start HTTP thread → run TCP ser
 	  `import_set` (pull a set's images/data), foil-mask and cosmetic helpers.
 - `tests/` — a handful of unit tests (action timer, notices, dynamic pages, decks…).
 - `tools/diagnose_sets.py`, `re_tools/create_card_bundle.py` — reverse-engineering/diagnostic scripts.
+- `tools/switch-server.js` (+ `.bat`) — rewrites the client's `cake.cfg` server lines to switch
+  between this PC's server (`local`), the GLC community server (`glc`) and `official`; the
+  `.bat` toggles local ↔ GLC on double-click. Client folder via `PTCGO_CLIENT_DIR`.
 - `sql/` — MariaDB/MySQL schema. `deploy/` — nginx config and VPS guide.
 - `gallery/` — README screenshots.
