@@ -1,5 +1,5 @@
 # SpiritPTCGO
-SpiritPTCGO is a Python server emulator for the **NOW** sunseted [Pokemon Trading Card Game Online (PTCGO)](https://en.wikipedia.org/wiki/Pok%C3%A9mon_TCG_Online) client.
+SpiritPTCGO is a Python server emulator for the **NOW** sunseted [Pokemon Trading Card Game Online (PTCGO)](https://en.wikipedia.org/wiki/Pok%C3%A9mon_TCG_Online) client. 
 
 ## Prequisites & Warning
 - This server was developed using the 2023 client (**2.95.0.5815**)
