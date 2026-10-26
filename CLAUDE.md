@@ -12,7 +12,7 @@
 - Git: when you finish a change, commit it unless I say not to. Commit directly to the current branch; don't create feature branches or PRs unless I ask. Do not push to GitHub unless I ask.
 - Maintain an ARCHITECTURE.md file that holds a high-level map of the code files.
 - When I say "What might we do next?" or "What next?" or similar, please look through the project's TODO file and briefly propose a handful of options for which tasks we might proceed with next.
-- Using bash to project code files has a history of going poorly for us - just edit files directly.
+- Use the Edit/Write tools for file changes; only use shell commands for bulk or mechanical changes across many files.
 - When you make helpful tools for yourself, save them to the repo in a nice out of the way spot to potentially reuse later.
 
 - TODO files: keep the project's to-do list in `TODO.md` at the repo root, in this format (indent sub-items with tabs):
