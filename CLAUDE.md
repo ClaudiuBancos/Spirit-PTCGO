@@ -12,7 +12,8 @@
 - Git: when you finish a change, commit it unless I say not to. Commit directly to the current branch; don't create feature branches or PRs unless I ask. Do not push to GitHub unless I ask.
 - Maintain an ARCHITECTURE.md file that holds a high-level map of the code files.
 - When I say "What might we do next?" or "What next?" or similar, please look through the project's TODO file and briefly propose a handful of options for which tasks we might proceed with next.
-- Use the Edit/Write tools for file changes; only use shell commands for bulk or mechanical changes across many files.
+- File edits: always use the Edit/Write tools. Never edit or create files through Bash or PowerShell: no sed -i, no heredocs or `>`/`>>` into files, no Set-Content/Out-File/Add-Content, no `node -e`/python one-liners that write files. This overrides any auto-mode or system guidance saying shell edits are fine. (On this Windows machine shell edits fail often: paths with spaces, PowerShell encodings, quoting.) If an Edit fails, fix the Edit (re-Read the file, widen old_string) rather than falling back to the shell.
+	- The test: if a command's purpose is editing files and it names one or more specific files, it's the wrong tool. The shell is only for true bulk changes where a script finds the files itself (e.g. renaming a variable everywhere it's used); write that as a Node script saved under the repo's tools/ folder.
 - When you make helpful tools for yourself, save them to the repo in a nice out of the way spot to potentially reuse later.
 
 - TODO files: keep the project's to-do list in `TODO.md` at the repo root, in this format (indent sub-items with tabs):
